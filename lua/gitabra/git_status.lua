@@ -643,7 +643,7 @@ local function gitabra_status()
     for _, file in pairs(st_info.unstaged) do
       local file_node = outline:add_node(section, ou.make_file_node(file.name, file.working))
       ou.populate_hunks_by_filepath(outline, file_node, patches.unstaged, file.name)
-      file_node.collapsed = true
+      file_node.collapsed = false
     end
   end
 
