@@ -50,7 +50,7 @@ local function gitabra_commit(mode)
     -- Start `git commit` and hold the process open
     local temppath = vim.fn.tempname()
 
-    local cmd = {"git", "commit"}
+    local cmd = {"git", "commit", "-v"}
     if mode == "amend" then
         table.insert(cmd, "--amend")
     end
